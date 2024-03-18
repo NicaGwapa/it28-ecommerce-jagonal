@@ -1,0 +1,58 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.tracking-container {
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+form input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+form input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.tracking-results {
+    margin-top: 20px;
+}
+
+.tracking-results h2 {
+    margin-bottom: 10px;
+}
+
+.tracking-results p {
+    margin: 5px 0;
+}
+
+#display_tracking_number,
+#display_status,
+#display_delivery_date {
+    font-weight: bold;
+}
