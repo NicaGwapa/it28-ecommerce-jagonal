@@ -3,23 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Logistics Tracking</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    <h1>Logistics Tracking</h1>
-    <div class="tracking-container">
-        <form>
-            <label for="tracking_number">Tracking Number:</label><br>
-            <input type="text" id="tracking_number" name="tracking_number" placeholder="Enter your tracking number" required><br><br>
-            <label for="status">Status:</label><br>
-            <input type="text" id="status" name="status" placeholder="Enter the status" required><br><br>
-            <label for="estimated_delivery">Estimated Delivery:</label><br>
-            <input type="text" id="estimated_delivery" name="estimated_delivery" placeholder="Enter the estimated delivery date" required><br><br>
-            <input type="submit" value="Track">
-        </form>
-        <div class="tracking-results">
-        </div>
-    </div>
+    <div class="container">
+        <div class="row">
+                              <div class="col-12 col-md-10 hh-grayBox pt20 pb20">
+                                  <div class="row justify-content-between">
+                                      <div class="order-tracking completed">
+                                          <span class="is-complete"></span>
+                                          <p>Ordered<br><span>Mon, June 24</span></p>
+                                      </div>
+                                      <div class="order-tracking completed">
+                                          <span class="is-complete"></span>
+                                          <p>Shipped<br><span>Tue, June 25</span></p>
+                                      </div>
+                                      <div class="order-tracking">
+                                          <span class="is-complete"></span>
+                                          <p>Delivered<br><span>Fri, June 28</span></p>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+      </div>
 </body>
 </html>
