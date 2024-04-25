@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="text-align: center; font-size: 70px; color: rgb(236, 11, 97);">Pa-PUFF DOL</h1>
+    <div class="card-group">
+        <div class="card">
+          <img src="https://vaperite.co.za/wp-content/uploads/2023/09/Geekvape-Aegis-L200-Classic-Vape-MOD-Rainbow-1.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Aegis L200</h5>
+            <p class="card-text">Price: $50</p>
+            <p class="card-text">Quantity: <input type="number" id="quantity1" value="1" min="1" max="10"></p>
+            <p class="card-text">Total: $<span id="total1">50</span></p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted"></small>
+          </div>
+          <div>
+            <a href="payment.html">
+                <button>Buy Now</button>
+            </a>
+          </div>
+        </div>
+        <!-- Add similar content for other products -->
+        
+        <!-- Second Card -->
+        <div class="card">
+          <img src="https://i0.wp.com/vapelinkuk.com/wp-content/uploads/2023/08/geekvape-aegis-x-zeus-kit-2ml-1686121159.png?fit=800%2C800&ssl=1" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Aegis T200</h5>
+            <p class="card-text">Price: $60</p>
+            <p class="card-text">Quantity: <input type="number" id="quantity2" value="1" min="1" max="10"></p>
+            <p class="card-text">Total: $<span id="total2">60</span></p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted"></small>
+          </div>
+          <div>
+            <a href="payment.html">
+                <button>Buy Now</button>
+            </a>
+          </div>
+        </div>
+
+        <!-- Third Card -->
+        <div class="card">
+          <img src="https://www.vapewholesaleglobal.com/cdn/shop/products/Geekvape-Aegis-Boost-Bonus-Kit-Luxury-Edition-1500mAh-4_1024x.jpg?v=1658404426" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Aegis solo v1</h5>
+            <p class="card-text">Price: $45</p>
+            <p class="card-text">Quantity: <input type="number" id="quantity3" value="1" min="1" max="10"></p>
+            <p class="card-text">Total: $<span id="total3">45</span></p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted"></small>
+          </div>
+          <div>
+            <a href="payment.html">
+                <button>Buy Now</button>
+            </a>
+          </div>
+        </div>
+
+        <!-- Fourth Card -->
+        <div class="card">
+          <img src="https://www.vapewholesaleglobal.com/cdn/shop/products/Geekvape-Aegis-Hero-Pod-Mod-Kit-1200mAh-4-630525_1024x.png?v=1662610368" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Aegis solo v2</h5>
+            <p class="card-text">Price: $55</p>
+            <p class="card-text">Quantity: <input type="number" id="quantity4" value="1" min="1" max="10"></p>
+            <p class="card-text">Total: $<span id="total4">55</span></p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted"></small>
+          </div>
+          <div>
+            <a href="payment.html">
+                <button>Buy Now</button>
+            </a>
+          </div>
+        </div>
+
+        <!-- Fifth Card -->
+        <div class="card">
+          <img src="https://vapeuk.co.uk/media/catalog/product/cache/bc83b92129d09e9708f3c9bb98ddc6b7/r/a/rainbow-geekvape-b60-aegis-boost-2-pod-mod-kit_1.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Aegis solo v3</h5>
+            <p class="card-text">Price: $40</p>
+            <p class="card-text">Quantity: <input type="number" id="quantity5" value="1" min="1" max="10"></p>
+            <p class="card-text">Total: $<span id="total5">40</span></p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted"></small>
+          </div>
+          <div>
+            <a href="payment.html">
+                <button>Buy Now</button>
+            </a>
+          </div>
+        </div>
+
+    </div>
+
+    <script>
+       
+        // Calculate total price for Aegis L200
+        document.querySelector('#total1').textContent = (document.querySelector('#total1').textContent * document.querySelector('input[type="number"]').value).toFixed(2);
+        
+        // Add event listener to update total price when quantity changes
+        document.querySelector('input[type="number"]').addEventListener('change', function() {
+            document.querySelector('#total1').textContent = (document.querySelector('input[type="number"]').value * 50).toFixed(2);
+        });
+    </script>
+    <script>
+      // Calculate total price for Aegis T200
+      document.querySelector('#total2').textContent = (document.querySelector('#total2').textContent * document.querySelector('#quantity2').value).toFixed(2);
+      // Add event listener to update total price when quantity changes
+      document.querySelector('#quantity2').addEventListener('change', function() {
+          document.querySelector('#total2').textContent = (document.querySelector('#quantity2').value * 60).toFixed(2);
+      });
+  </script>
+
+  <!-- Third Card -->
+  <div class="card">
+    <img src="https://www.vapewholesaleglobal.com/cdn/shop/products/Geekvape-Aegis-Boost-Bonus-Kit-Luxury-Edition-1500mAh-4_1024x.jpg?v=1658404426" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Aegis solo v1</h5>
+      <p class="card-text">Price: $45</p>
+      <p class="card-text">Quantity: <input type="number" id="quantity3" value="1" min="1" max="10"></p>
+      <p class="card-text">Total: $<span id="total3">45</span></p>
+    </div>
+    <div class="card-footer">
+      <small class="text-muted"></small>
+    </div>
+    <div>
+      <a href="payment.html">
+          <button>Buy Now</button>
+      </a>
+    </div>
+  </div>
+  <!-- JavaScript for Third Card -->
+  <script>
+      // Calculate total price for Aegis solo v1
+      document.querySelector('#total3').textContent = (document.querySelector('#total3').textContent * document.querySelector('#quantity3').value).toFixed(2);
+      // Add event listener to update total price when quantity changes
+      document.querySelector('#quantity3').addEventListener('change', function() {
+          document.querySelector('#total3').textContent = (document.querySelector('#quantity3').value * 45).toFixed(2);
+      });
+  </script>
+  <!-- Fourth Card -->
+<div class="card">
+  <img src="https://www.vapewholesaleglobal.com/cdn/shop/products/Geekvape-Aegis-Hero-Pod-Mod-Kit-1200mAh-4-630525_1024x.png?v=1662610368" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Aegis solo v2</h5>
+    <p class="card-text">Price: $55</p>
+    <p class="card-text">Quantity: <input type="number" id="quantity4" value="1" min="1" max="10"></p>
+    <p class="card-text">Total: $<span id="total4">55</span></p>
+  </div>
+  <div class="card-footer">
+    <small class="text-muted"></small>
+  </div>
+  <div>
+    <a href="payment.html">
+        <button>Buy Now</button>
+    </a>
+  </div>
+</div>
+<!-- JavaScript for Fourth Card -->
+<script>
+    // Calculate total price for Aegis solo v2
+    document.querySelector('#total4').textContent = (document.querySelector('#total4').textContent * document.querySelector('#quantity4').value).toFixed(2);
+    // Add event listener to update total price when quantity changes
+    document.querySelector('#quantity4').addEventListener('change', function() {
+        document.querySelector('#total4').textContent = (document.querySelector('#quantity4').value * 55).toFixed(2);
+    });
+</script>
+
+<!-- Fifth Card -->
+<div class="card">
+  <img src="https://vapeuk.co.uk/media/catalog/product/cache/bc83b92129d09e9708f3c9bb98ddc6b7/r/a/rainbow-geekvape-b60-aegis-boost-2-pod-mod-kit_1.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Aegis solo v3</h5>
+    <p class="card-text">Price: $40</p>
+    <p class="card-text">Quantity: <input type="number" id="quantity5" value="1" min="1" max="10"></p>
+    <p class="card-text">Total: $<span id="total5">40</span></p>
+  </div>
+  <div class="card-footer">
+    <small class="text-muted"></small>
+  </div>
+  <div>
+    <a href="payment.html">
+        <button>Buy Now</button>
+    </a>
+  </div>
+</div>
+<!-- JavaScript for Fifth Card -->
+<script>
+    // Calculate total price for Aegis solo v3
+    document.querySelector('#total5').textContent = (document.querySelector('#total5').textContent * document.querySelector('#quantity5').value).toFixed(2);
+    // Add event listener to update total price when quantity changes
+    document.querySelector('#quantity5').addEventListener('change', function() {
+        document.querySelector('#total5').textContent = (document.querySelector('#quantity5').value * 40).toFixed(2);
+    });
+</script>
+</body>
+</html>
