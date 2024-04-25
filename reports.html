@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="text-align: center; font-size: 70px; color: rgb(236, 11, 97);">Pa-PUFF DOL</h1>
+    <div class="card-group">
+        <!-- Cards content goes here -->
+    </div>
+
+    <!-- Inventory Report Section -->
+    <div style="margin-top: 50px;">
+        <h2 style="text-align: center;">Inventory Report</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Quantity</th>
+                    <th>Total Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Aegis L200</td>
+                    <td id="inventory_quantity1"></td>
+                    <td id="inventory_value1"></td>
+                </tr>
+                <tr>
+                    <td>Aegis T200</td>
+                    <td id="inventory_quantity2"></td>
+                    <td id="inventory_value2"></td>
+                </tr>
+                <tr>
+                    <td>Aegis solo v1</td>
+                    <td id="inventory_quantity3"></td>
+                    <td id="inventory_value3"></td>
+                </tr>
+                <tr>
+                    <td>Aegis solo v2</td>
+                    <td id="inventory_quantity4"></td>
+                    <td id="inventory_value4"></td>
+                </tr>
+                <tr>
+                    <td>Aegis solo v3</td>
+                    <td id="inventory_quantity5"></td>
+                    <td id="inventory_value5"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        // Function to update inventory report
+        function updateInventoryReport() {
+            // Product quantities
+            var quantities = [
+                document.getElementById('quantity1').value,
+                document.getElementById('quantity2').value,
+                document.getElementById('quantity3').value,
+                document.getElementById('quantity4').value,
+                document.getElementById('quantity5').value
+            ];
+
+            // Product prices
+            var prices = [50, 60, 45, 55, 40];
+
+            // Update inventory report
+            for (var i = 0; i < quantities.length; i++) {
+                document.getElementById('inventory_quantity' + (i + 1)).textContent = quantities[i];
+                document.getElementById('inventory_value' + (i + 1)).textContent = (quantities[i] * prices[i]).toFixed(2);
+            }
+        }
+
+        // Add event listeners to update inventory report on quantity change
+        document.querySelectorAll('input[type="number"]').forEach(function(element) {
+            element.addEventListener('change', updateInventoryReport);
+        });
+
+        // Initial update of inventory report
+        updateInventoryReport();
+    </script>
+</body>
+</html>
